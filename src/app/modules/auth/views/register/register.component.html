@@ -1,0 +1,24 @@
+<card>
+  <card-title>Register</card-title>
+  <card-text>
+    <div>
+      Name
+      <form-input [control]="model.controls.name"></form-input>
+    </div>
+    <div>
+      Email
+      <form-input [control]="model.controls.email"></form-input>
+    </div>
+    <div>
+      Password
+      <form-input [control]="model.controls.password" inputType="password"></form-input>
+    </div>
+    <div>
+      Confirm password
+      <form-input [control]="model.controls.password_confirmation" inputType="password"></form-input>
+    </div>
+  </card-text>
+  <card-actions>
+    <btn (click)="register()" primary>Register</btn>
+  </card-actions>
+</card>

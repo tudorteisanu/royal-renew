@@ -1,0 +1,13 @@
+.auth {
+  background: aquamarine;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--outlet {
+    min-width: 400px;
+    min-height: 300px;
+  }
+}

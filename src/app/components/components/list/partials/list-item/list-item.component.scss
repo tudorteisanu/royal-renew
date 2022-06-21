@@ -1,0 +1,15 @@
+list-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  padding: .75rem .5rem;
+  position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid var(--black-10);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--black-10);
+  }
+}

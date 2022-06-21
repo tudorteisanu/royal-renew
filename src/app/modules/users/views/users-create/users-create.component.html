@@ -1,0 +1,48 @@
+<card>
+  <card-title>Create</card-title>
+  <card-subtitle> some text for subtitle </card-subtitle>
+  <card-text>
+    <form
+      (click)="$event.preventDefault()"
+      [formGroup]="model"
+      autocomplete="off"
+      autocapitalize="off"
+    >
+      <form-input
+        label="Name"
+        [control]="model.controls.name"
+        [errors]="errorMessages.name"
+      ></form-input>
+      <form-input
+        label="Email"
+        [control]="model.controls.email"
+        inputType="email"
+        [errors]="errorMessages.email"
+      ></form-input>
+      <form-input
+        label="Password"
+        inputType="password"
+        [control]="model.controls.password"
+        [errors]="errorMessages.password"
+      ></form-input>
+      <form-input
+        label="Role"
+        tag="select"
+        [control]="model.controls.role_id"
+        [errors]="errorMessages.role_id"
+        [items]="roles"
+      ></form-input>
+      <form-input
+        label="Role"
+        tag="textarea"
+        [control]="model.controls.role_id"
+        [errors]="errorMessages.role_id"
+      ></form-input>
+    </form>
+  </card-text>
+  <card-actions>
+    <spacer></spacer>
+    <btn (click)="toList()" class="btn btn-outline">Cancel</btn>
+    <btn primary (click)="submit()" class="mx-2">confirm</btn>
+  </card-actions>
+</card>

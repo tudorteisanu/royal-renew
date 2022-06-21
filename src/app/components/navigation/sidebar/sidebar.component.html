@@ -1,0 +1,26 @@
+<div class="sidebar" [@sidebarAnimation]="animation">
+  <div class="sidebar--list">
+    <div
+      *ngFor="let item of items"
+      [routerLink]="item.path"
+      class="sidebar--item"
+      routerLinkActive="active"
+    >
+      <span class="sidebar--icon" [ngClass]="iconClass(item.icon)"></span>
+      <span *ngIf="show">
+        {{ item.text }}
+      </span>
+    </div>
+    <div
+      (click)="showConfirm()"
+      class="sidebar--item"
+      routerLinkActive="active"
+    >
+      <span class="sidebar--icon" [ngClass]="iconClass('mdi-logout')"></span>
+      <span *ngIf="show">
+        Logout
+      </span>
+    </div>
+  </div>
+  <div class="app-version" *ngIf="show">version: {{ this.version }}</div>
+</div>

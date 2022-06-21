@@ -1,0 +1,45 @@
+<div class="form-input--label" *ngIf="control && control.value">
+  {{ label }}
+</div>
+<div [ngSwitch]="tag" class="form-input-wrapper">
+  <textarea
+    class="input"
+    autocomplete="doNotAutoComplete"
+    [formControl]="control"
+    [rows]="rows"
+    [ngClass]="inputClass"
+    (input)="emitInput($event)"
+    [placeholder]="text"
+    *ngSwitchCase="'textarea'"
+  ></textarea>
+  <select
+    class="input"
+    autocomplete="doNotAutoComplete"
+    [formControl]="control"
+    [ngClass]="inputClass"
+    *ngSwitchCase="'select'"
+  >
+    <option
+      [value]="item.value"
+      *ngFor="let item of items"
+      (click)="selectItem(item)"
+    >
+      {{ item.text }}
+    </option>
+  </select>
+  <input
+    class="input"
+    [type]="inputType"
+    autocomplete="doNotAutoComplete"
+    [formControl]="control"
+    [ngClass]="inputClass"
+    (input)="emitInput($event)"
+    [placeholder]="text"
+    *ngSwitchDefault
+  />
+</div>
+<div [ngClass]="errorClass">
+  <span>
+    {{ errorMessage }}
+  </span>
+</div>

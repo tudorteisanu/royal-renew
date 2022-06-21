@@ -1,0 +1,52 @@
+on:
+  push:
+    branches:
+      - master
+
+    tags:
+      - 'v*.*.*'
+
+name: "[DEV] Deploy dev server"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out
+        uses: actions/checkout@v2
+      - name: Set environment variable
+        run: echo "RELEASE_VERSION=${GITHUB_REF:11}" >> $GITHUB_ENV
+      - name: Test environment variable
+        run: echo ${{ env.RELEASE_VERSION }}
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+      - run: npm i
+      - run: npm run build
+      - name: Login to Github Packages
+        uses: docker/login-action@v1
+        with:
+          registry: docker.pkg.github.com
+          username: $GITHUB_ACTOR
+          password: ${{ secrets.DOCKER_AUTH_TOKEN }}
+      - name: Build image and push to GitHub Packages
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          tags: "docker.pkg.github.com/tudorteisanu/template/template:${{ env.RELEASE_VERSION }}"
+          push: true
+
+      - name: Add ssh key
+        run: |
+          set -eu
+          mkdir "$HOME/.ssh"
+          echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+          chmod 600 "$HOME/.ssh/key"
+      - name: Update services
+        shell: bash
+        env:
+          USER: ${{ secrets.user }}
+          HOST: ${{ secrets.host }}
+          VERSION: ${{ env.RELEASE_VERSION }}
+          COMPOSE_FILE_PATH: ${{ secrets.compose_file_path }}
+        run: ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no $USER@$HOST "export DOCKER_IMAGE_VERSION=${VERSION} && docker-compose -f ${COMPOSE_FILE_PATH} pull && docker-compose -f ${COMPOSE_FILE_PATH} up -d"

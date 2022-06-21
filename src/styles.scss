@@ -1,0 +1,40 @@
+@import "src/assets/scss/app";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #5768e6;
+  --primary-500: rgba(87, 104, 230, 0.76);
+  --primary-10: rgba(87, 104, 230, 0.1);
+  --secondary: #958e8e;
+  --white: #ffffff;
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-200: rgba(255, 255, 255, 0.2);
+  --black: #ffffff;
+  --black-80: rgba(0, 0, 0, 0.8);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-10: rgba(0, 0, 0, 0.1);
+  --error: rgba(255, 50, 50, 1);
+}
+
+
+html {
+  height: 100%;
+}
+
+span.mdi[color="primary"] {
+  color: var(--primary)
+}
+
+span.mdi[color="error"] {
+  color: var(--error)
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}

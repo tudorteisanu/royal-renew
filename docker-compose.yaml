@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  web:
+    build: .
+
+    networks:
+      - web
+
+    ports:
+      - "4200:4200"
+      - "3000:3000"
+
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+
+    expose:
+      - 4200
+
+networks:
+  web:
+    external: true

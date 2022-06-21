@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "firstname": "Mike",
+      "lastname": "Tysonsdsd s ",
+      "email": "test@mail.ru",
+      "id": 35
+    },
+    {
+      "firstname": "Mike",
+      "lastname": "aafa",
+      "email": "test@mail.ru",
+      "id": 38
+    },
+    {
+      "firstname": "Mike",
+      "lastname": "Tyson",
+      "email": "test@mail.ru",
+      "id": 39
+    },
+    {
+      "id": 42,
+      "firstname": "llllllll",
+      "lastname": "lebada",
+      "email": "klllllllllllllll@klll.r"
+    }
+  ],
+  "roles": [
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 40
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 41
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 42
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 43
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 44
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 45
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 49
+    },
+    {
+      "name": "Admin",
+      "alias": "admin",
+      "id": 50
+    }
+  ]
+}

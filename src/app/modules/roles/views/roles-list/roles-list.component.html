@@ -1,0 +1,37 @@
+<section class="roles-wrapper">
+  <btn primary routerLink="create">Create</btn>
+  <div class="roles">
+    <div class="card">
+      <table class="list" [ngStyle]="headerStyles">
+        <thead>
+          <tr class="headers">
+            <th
+              class="headers--item"
+              *ngFor="let header of headers; trackBy: headerTrackBy"
+            >
+              {{ header.text }}
+            </th>
+            <th class="headers--item actions">actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let role of roles; trackBy: roleTrackBy"
+            class="list--item"
+          >
+            <td *ngFor="let header of headers; trackBy: headerTrackBy">
+              {{ role[header.value] }}
+            </td> <td>
+            <btn icon [routerLink]="['.', 'edit', role.id]">
+              <span class="mdi mdi-pencil"></span>
+            </btn>
+            <btn icon (click)="showConfirm(role.id)">
+              <span class="mdi mdi-delete"></span>
+            </btn>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

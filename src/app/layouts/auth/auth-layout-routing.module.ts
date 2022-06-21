@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthLayoutComponent } from '@App/layouts/auth/auth-layout/auth-layout.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AuthLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('@App/modules/auth/auth.module').then((m) => m.AuthModule),
+      },
+    ],
+  },
+];
+
+@NgModule({
+  imports: [CommonModule, RouterModule.forChild(routes)],
+})
+export class AuthLayoutRoutingModule {}

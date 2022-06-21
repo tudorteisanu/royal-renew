@@ -1,0 +1,31 @@
+<div
+  class="confirm-dialog-wrapper"
+  *ngIf="showConfirm"
+  @confirmAnimation
+  (click)="handleBackgroundClick()"
+>
+  <div class="confirm-dialog">
+    <div class="confirm-dialog--content">
+      <div class="confirm-dialog--title" *ngIf="config.title">
+        {{ config.title }}
+      </div>
+      <div class="confirm-dialog--text" *ngIf="config.text">
+        {{ config.text }}
+      </div>
+    </div>
+    <div class="confirm-dialog--actions">
+      <button
+        class="confirm-dialog--btn confirm-dialog--btn-cancel"
+        (click)="reject()"
+      >
+        {{ config.errorText }}
+      </button>
+      <button
+        class="confirm-dialog--btn confirm-dialog--btn-success"
+        (click)="accept()"
+      >
+        {{ config.successText }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+.alert-wrapper {
+  position: fixed;
+  right: 1rem;
+  top: 5rem;
+  width: 300px;
+
+  .alert {
+    background: white;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+      0 1px 5px 0 rgb(0 0 0 / 12%);
+
+    &--title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    &--text {
+      margin-top: 0.2rem;
+    }
+  }
+
+  .warning {
+    .alert--title {
+      color: #f7b942;
+    }
+  }
+
+  .success {
+    .alert--title {
+      color: #00db26;
+    }
+  }
+
+  .error {
+    .alert--title {
+      color: #ff4949;
+    }
+  }
+
+  .info {
+    .alert--title {
+      color: #28ccff;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.headers {
+  &--item {
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+  }
+}
+table,
+tr,
+td {
+  border-collapse: collapse;
+}
+
+.list {
+  width: 100%;
+  text-align: center;
+  border-radius: 0.25rem;
+
+  &--item {
+    td {
+      padding: 0.5rem;
+      border: 1px solid lightgray;
+    }
+
+    &:hover {
+      background-color: rgba(#000, 0.1);
+    }
+  }
+}
+
+.actions {
+  width: 4rem;
+}
