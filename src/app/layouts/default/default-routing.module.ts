@@ -9,19 +9,9 @@ const routes: Routes = [
     component: DefaultLayoutComponent,
     children: [
       {
-        path: 'users',
-        loadChildren: () =>
-          import('@App/modules/users/users.module').then((m) => m.UsersModule),
-      },
-      {
-        path: 'roles',
-        loadChildren: () =>
-          import('@App/modules/roles/roles.module').then((m) => m.RolesModule),
-      },
-      {
         path: '',
-        redirectTo: 'users',
-        pathMatch: 'full',
+        loadChildren: () =>
+          import('@App/pages/home/home.module').then((m) => m.HomeModule),
       },
     ],
     canLoad: [AuthGuard],

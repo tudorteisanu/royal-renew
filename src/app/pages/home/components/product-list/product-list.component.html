@@ -1,0 +1,17 @@
+<section>
+  <div class="max-w-5xl w-full mx-auto py-20">
+    <div class="text-3xl font-bold">Каталог продукции</div>
+    <div class="grid grid-cols-5 mt-10">
+      <div *ngFor="let item of items">
+        <div class="w-40 h-40 bg-gray-600 relative m-3">
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img *ngIf="item.url" [src]="item.url" alt="" />
+          </div>
+        </div>
+        <div class="font-bold mt-4 text-center">{{item.title}}</div>
+      </div>
+    </div>
+  </div>
+</section>

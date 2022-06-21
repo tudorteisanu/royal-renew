@@ -3,8 +3,8 @@ import { HttpService } from '@App/services/http/http.service';
 import {
   LoginInterface,
   RegisterInterface,
-} from '@App/modules/auth/interfaces';
-import { Observable } from 'rxjs';
+} from '@App/interfaces/auth';
+import {Observable, of} from 'rxjs';
 import { SiteSettings } from '@App/settings/siteSettings';
 import { EndpointsInterface } from '@App/interfaces/siteSettings';
 
@@ -29,7 +29,8 @@ export class AuthApiService {
   }
 
   public checkAuth(): Observable<boolean> {
-    return this.http.get(this.endpoints.checkAuth);
+    return of(true)
+    // return this.http.get(this.endpoints.checkAuth);
   }
 
   public changePassword(

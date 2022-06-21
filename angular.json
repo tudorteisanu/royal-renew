@@ -10,11 +10,11 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "template": {
+    "royal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "css"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -38,7 +38,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "template:build:production"
+              "browserTarget": "royal:build:production"
             },
             "development": {
-              "browserTarget": "template:build:development"
+              "browserTarget": "royal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "template:build"
+            "browserTarget": "royal:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -114,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "template"
+  "defaultProject": "royal"
 }
