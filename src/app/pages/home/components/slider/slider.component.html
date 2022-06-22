@@ -1,5 +1,5 @@
 <section
-  class="relative w-100 min-h-[20rem] w-full h-100 max-h-[40rem] overflow-hidden"
+  class="relative w-100 min-h-[20rem] w-full h-100 max-h-[92vh] overflow-hidden"
 >
   <img
     class="max-w-full h-100 max-h-full object-cover"
@@ -11,23 +11,23 @@
   >
     <div class="flex items-center justify-between max-w-5xl mx-auto w-full">
       <ul class="flex">
-        <li class="text-white font-bold ml-3">3Д панэли</li>
-        <li class="text-white font-bold ml-3">3Д панэли</li>
-        <li class="text-white font-bold ml-3">3Д панэли</li>
-        <li class="text-white font-bold ml-3">3Д панэли</li>
-        <li class="text-white font-bold ml-3">3Д панэли</li>
-        <li class="text-white font-bold ml-3">3Д панэли</li>
+        <li
+          class="text-white font-bold ml-3  cursor-pointer hover:text-secondary"
+          *ngFor="let item of items"
+        >
+          {{ item.title }}
+        </li>
       </ul>
-      <div class="text-white text-xl font-bold">+373 XX XX XX</div>
+      <div class="text-white text-2xl font-bold">+373 XX XX XX</div>
     </div>
     <div class="mx-auto w-full max-w-5xl flex items-center justify-between">
       <div>
         <div>
-          <div class="text-white text-7xl">Производство</div>
-          <div class="text-white text-5xl">Продажа и монтаж</div>
-          <div class="text-secondary text-5xl">Гисовой лепнины</div>
+          <div class="text-white font-bold text-7xl">Производство</div>
+          <div class="text-white text-5xl font-bold">Продажа и монтаж</div>
+          <div class="text-secondary text-5xl font-bold">Гипсовой лепнины</div>
         </div>
-        <button class="bg-secondary rounded-full p-5 font-bold w-[20rem] mt-10">
+        <button class="bg-secondary rounded-full p-5 font-bold w-[20rem] mt-10 text-lg cursor-pointer">
           Каталог продукции
         </button>
       </div>

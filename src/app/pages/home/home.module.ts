@@ -5,9 +5,18 @@ import { HomeComponent } from '@App/pages/home/home.component';
 import { HomeRoutingModule } from '@App/pages/home/home-routing.module';
 import { InfoComponent } from './components/info/info.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { CategoriesMixin } from '@App/pages/home/mixins/categoriesMixin';
+import { SalesComponent } from './components/sales/sales.component';
 
 @NgModule({
-  declarations: [HomeComponent, SliderComponent, InfoComponent, ProductListComponent],
+  declarations: [
+    HomeComponent,
+    SliderComponent,
+    InfoComponent,
+    ProductListComponent,
+    CategoriesMixin,
+    SalesComponent,
+  ],
   exports: [HomeComponent, SliderComponent],
   imports: [CommonModule, HomeRoutingModule],
 })
