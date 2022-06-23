@@ -7,6 +7,7 @@ import { InfoComponent } from './components/info/info.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CategoriesMixin } from '@App/pages/home/mixins/categoriesMixin';
 import { SalesComponent } from './components/sales/sales.component';
+import { NoveltiesComponent } from './components/novelties/novelties.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SalesComponent } from './components/sales/sales.component';
     ProductListComponent,
     CategoriesMixin,
     SalesComponent,
+    NoveltiesComponent,
   ],
   exports: [HomeComponent, SliderComponent],
   imports: [CommonModule, HomeRoutingModule],
