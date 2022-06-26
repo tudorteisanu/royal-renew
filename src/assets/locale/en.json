@@ -1,6 +1,6 @@
 {
   "test": "data a as ",
   "mega": {
-    "man": "sdsdsd"
+    "man": "sdsdsd {{value}}"
   }
 }

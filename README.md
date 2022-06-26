@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Localization
+- Add your locale file to `assets/locales`
+
+- Into Module add import  
+```ts
+import { TranslateModule } from '@ngx-translate/core';
+
+@NgModule({
+    imports: [TranslateModule],
+})
+```
+
+View official documentation https://github.com/ngx-translate/core
+
+## Tailwind
+We use tailwind as css framework. We don't use pre-processors, just post css.
+View official docs https://tailwindcss.com/

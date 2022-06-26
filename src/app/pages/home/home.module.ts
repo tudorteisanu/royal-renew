@@ -9,7 +9,7 @@ import { CategoriesMixinComponent } from 'src/app/pages/home/mixins/CategoriesMi
 import { SalesComponent } from './components/sales/sales.component';
 import { NoveltiesComponent } from './components/novelties/novelties.component';
 import { RouterModule } from '@angular/router';
-import {TranslateModule} from "@ngx-translate/core";
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,6 @@ import {TranslateModule} from "@ngx-translate/core";
     NoveltiesComponent,
   ],
   exports: [HomeComponent, SliderComponent],
-    imports: [CommonModule, RouterModule, HomeRoutingModule, TranslateModule],
+  imports: [CommonModule, RouterModule, HomeRoutingModule, TranslateModule],
 })
 export class HomeModule {}
