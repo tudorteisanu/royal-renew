@@ -14,16 +14,10 @@
       </div>
     </div>
     <div class="confirm-dialog--actions">
-      <button
-        class="confirm-dialog--btn confirm-dialog--btn-cancel"
-        (click)="reject()"
-      >
+      <button class="confirm-dialog--btn confirm-dialog--btn-cancel" (click)="reject()">
         {{ config.errorText }}
       </button>
-      <button
-        class="confirm-dialog--btn confirm-dialog--btn-success"
-        (click)="accept()"
-      >
+      <button class="confirm-dialog--btn confirm-dialog--btn-success" (click)="accept()">
         {{ config.successText }}
       </button>
     </div>

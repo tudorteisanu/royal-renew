@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { DialogModule } from '@App/components/dialogs/dialog.module';
+import { DialogModule } from 'src/app/components/dialogs/dialog.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DefaultLayoutComponent } from '@App/layouts/default/default-layout/default-layout.component';
-import { AuthGuard } from '@App/guards/auth.guard';
+import { DefaultLayoutComponent } from 'src/app/layouts/default/default-layout/default-layout.component';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,22 +10,17 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () =>
-          import('@App/pages/home/home.module').then((m) => m.HomeModule),
+        loadChildren: () => import('src/app/pages/home/home.module').then((m) => m.HomeModule),
       },
       {
         path: 'product-list',
         loadChildren: () =>
-          import('@App/pages/product-list/product-list.module').then(
-            (m) => m.ProductListModule
-          ),
+          import('src/app/pages/product-list/product-list.module').then((m) => m.ProductListModule),
       },
       {
         path: 'product/:id',
         loadChildren: () =>
-          import('@App/pages/product/product.module').then(
-            (m) => m.ProductModule
-          ),
+          import('src/app/pages/product/product.module').then((m) => m.ProductModule),
       },
     ],
     canLoad: [AuthGuard],

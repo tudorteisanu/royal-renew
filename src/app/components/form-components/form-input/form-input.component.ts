@@ -1,15 +1,9 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ValidationService } from '@App/services/helpers/validation.service';
+import { ValidationService } from 'src/app/services/helpers/validation.service';
 
-declare type InputType = 'text' | 'number' | 'password' | 'email'
-declare type TagType = 'input' | 'select' | 'textarea'
+declare type InputType = 'text' | 'number' | 'password' | 'email';
+declare type TagType = 'input' | 'select' | 'textarea';
 
 @Component({
   selector: 'form-input',
@@ -19,13 +13,21 @@ declare type TagType = 'input' | 'select' | 'textarea'
 })
 export class FormInputComponent {
   @Input() control: FormControl = new FormControl();
+
   @Input() inputType: InputType = 'text';
+
   @Input() value: any;
+
   @Input() errors: Array<string> = [];
+
   @Output() valueChange = new EventEmitter();
+
   @Input() tag: TagType = 'input';
+
   @Input() items: Array<any> = [];
+
   @Input() rows: string = '3';
+
   @Input() label: string = '';
 
   constructor(private readonly validationService: ValidationService) {}
@@ -48,8 +50,7 @@ export class FormInputComponent {
 
   get inputClass(): { [key: string]: boolean } {
     return {
-      'error-input':
-        (this.control.dirty || this.control.touched) && !!this.errorMessage,
+      'error-input': (this.control.dirty || this.control.touched) && !!this.errorMessage,
     };
   }
 

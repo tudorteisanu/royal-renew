@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ConfirmService } from '@App/services/confirm.service';
+import { ConfirmService } from 'src/app/services/confirm.service';
 
 @Component({
   selector: 'app-default-layout',

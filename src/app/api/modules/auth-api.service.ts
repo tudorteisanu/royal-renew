@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpService } from '@App/services/http/http.service';
-import {
-  LoginInterface,
-  RegisterInterface,
-} from '@App/interfaces/auth';
-import {Observable, of} from 'rxjs';
-import { SiteSettings } from '@App/settings/siteSettings';
-import { EndpointsInterface } from '@App/interfaces/siteSettings';
+import { HttpService } from 'src/app/services/http/http.service';
+import { LoginInterface, RegisterInterface } from 'src/app/interfaces/auth';
+import { Observable, of } from 'rxjs';
+import { SiteSettings } from 'src/app/settings/siteSettings';
+import { EndpointsInterface } from 'src/app/interfaces/siteSettings';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthApiService {
   protected readonly http: HttpService;
+
   private readonly endpoints: EndpointsInterface;
 
   constructor(httpService: HttpService) {
@@ -29,13 +27,11 @@ export class AuthApiService {
   }
 
   public checkAuth(): Observable<boolean> {
-    return of(true)
+    return of(true);
     // return this.http.get(this.endpoints.checkAuth);
   }
 
-  public changePassword(
-    payload: RegisterInterface
-  ): Observable<RegisterInterface> {
+  public changePassword(payload: RegisterInterface): Observable<RegisterInterface> {
     return this.http.post(this.endpoints.changePassword, payload);
   }
 }

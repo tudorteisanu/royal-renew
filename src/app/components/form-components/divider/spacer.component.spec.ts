@@ -8,9 +8,8 @@ describe('SpacerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpacerComponent ]
-    })
-    .compileComponents();
+      declarations: [SpacerComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SpacerComponent);
     component = fixture.componentInstance;

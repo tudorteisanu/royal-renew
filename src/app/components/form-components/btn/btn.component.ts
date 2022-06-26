@@ -1,13 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'btn',
   templateUrl: './btn.component.html',
-  styleUrls: ['./btn.component.scss'],
+  styleUrls: ['./btn.component.css'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BtnComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class BtnComponent {}

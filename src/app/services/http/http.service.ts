@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ErrorHandlerService } from '@App/services/http/error-handler.service';
+import { ErrorHandlerService } from 'src/app/services/http/error-handler.service';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class HttpService {
   private params: { [key: string]: [value: string] } = {};
+
   private headers: any = {};
+
   public ignoredErrors: Array<number> = [];
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -18,7 +20,7 @@ export class HttpService {
   private handleError(error: any) {
     const errorHandler = new ErrorHandlerService(this.router);
     errorHandler.handle(this.ignoredErrors, error);
-    return throwError(() => ({...error.error, status: error.status}));
+    return throwError(() => ({ ...error.error, status: error.status }));
   }
 
   public get(url: string): any {

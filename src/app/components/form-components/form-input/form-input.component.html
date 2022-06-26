@@ -19,11 +19,7 @@
     [ngClass]="inputClass"
     *ngSwitchCase="'select'"
   >
-    <option
-      [value]="item.value"
-      *ngFor="let item of items"
-      (click)="selectItem(item)"
-    >
+    <option [value]="item.value" *ngFor="let item of items" (click)="selectItem(item)">
       {{ item.text }}
     </option>
   </select>

@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-import { SliderComponent } from '@App/pages/home/components/slider/slider.component';
-import { NoveltiesComponent } from '@App/pages/home/components/novelties/novelties.component';
-import { SalesComponent } from '@App/pages/home/components/sales/sales.component';
+import { SliderComponent } from 'src/app/pages/home/components/slider/slider.component';
+import { NoveltiesComponent } from 'src/app/pages/home/components/novelties/novelties.component';
+import { SalesComponent } from 'src/app/pages/home/components/sales/sales.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductListComponent } from '@App/pages/home/components/product-list/product-list.component';
+import { ProductListComponent } from 'src/app/pages/home/components/product-list/product-list.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

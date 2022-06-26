@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesMixin } from '@App/pages/home/mixins/categoriesMixin';
+import { CategoriesMixinComponent } from 'src/app/pages/home/mixins/CategoriesMixinComponent';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
 })
-export class ProductListComponent extends CategoriesMixin implements OnInit {}
+export class ProductListComponent extends CategoriesMixinComponent implements OnInit {}

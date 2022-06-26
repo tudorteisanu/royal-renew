@@ -1,4 +1,4 @@
-import { SiteSettingsInterface } from '@App/interfaces/siteSettings';
+import { SiteSettingsInterface } from 'src/app/interfaces/siteSettings';
 
 export const SiteSettings: SiteSettingsInterface = {
   endpoints: {

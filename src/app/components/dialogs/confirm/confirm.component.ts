@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ConfirmService } from '@App/services/confirm.service';
-import { ConfirmDialogOptions } from '@App/interfaces/confirm';
-import { confirmAnimation } from '@App/components/dialogs/confirm/animations';
+import { ConfirmService } from 'src/app/services/confirm.service';
+import { ConfirmDialogOptions } from 'src/app/interfaces/confirm';
+import { confirmAnimation } from 'src/app/components/dialogs/confirm/animations';
 
 @Component({
   selector: 'app-confirm',
@@ -19,6 +19,7 @@ export class ConfirmComponent {
     reject: () => {},
     closeOnBackgroundClick: false,
   };
+
   public showConfirm: boolean = false;
 
   constructor(protected confirmService: ConfirmService) {

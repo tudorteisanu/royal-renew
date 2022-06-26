@@ -1,6 +1,4 @@
-<section
-  class="relative w-100 min-h-[20rem] w-full h-100 max-h-[92vh] overflow-hidden"
->
+<section class="relative w-100 min-h-[20rem] w-full h-100 max-h-[92vh] overflow-hidden">
   <img
     class="max-w-full h-100 max-h-full object-cover"
     src="assets/images/03154400_1568022295.png"
@@ -9,10 +7,10 @@
   <div
     class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-between flex-col py-10"
   >
-    <div class="flex items-center justify-between max-w-5xl mx-auto w-full">
+    <div class="flex items-center justify-between max-w-7xl mx-auto w-full">
       <ul class="flex">
         <li
-          class="text-white font-bold ml-3  cursor-pointer hover:text-secondary"
+          class="text-white font-bold ml-3 cursor-pointer hover:text-secondary"
           *ngFor="let item of items"
         >
           {{ item.title }}
@@ -20,29 +18,28 @@
       </ul>
       <div class="text-white text-2xl font-bold">+373 XX XX XX</div>
     </div>
-    <div class="mx-auto w-full max-w-5xl flex items-center justify-between">
+    <div class="mx-auto w-full max-w-7xl flex items-center justify-between">
       <div>
         <div>
           <div class="text-white font-bold text-7xl">Производство</div>
           <div class="text-white text-5xl font-bold">Продажа и монтаж</div>
           <div class="text-secondary text-5xl font-bold">Гипсовой лепнины</div>
         </div>
-        <button class="bg-secondary rounded-full p-5 font-bold w-[20rem] mt-10 text-lg cursor-pointer">
+        <button
+          class="bg-secondary rounded-full p-5 font-bold w-[20rem] mt-10 text-lg cursor-pointer"
+          routerLink="/product-list"
+        >
           Каталог продукции
         </button>
       </div>
       <div>
-        <div
-          class="mdi mdi-chevron-right text-6xl py-10 text-gray-500 bg-gray-300"
-        ></div>
+        <div class="mdi mdi-chevron-right text-6xl py-10 text-gray-500 bg-gray-300"></div>
       </div>
     </div>
     <div class="w-full flex items-center justify-center">
       <div class="flex">
         <div class="rounded-full w-6 h-6 border border-2 border-white"></div>
-        <div
-          class="rounded-full w-6 h-6 border border-2 bg-white border-white mx-2"
-        ></div>
+        <div class="rounded-full w-6 h-6 border border-2 bg-white border-white mx-2"></div>
         <div class="rounded-full w-6 h-6 border border-2 border-white"></div>
       </div>
     </div>

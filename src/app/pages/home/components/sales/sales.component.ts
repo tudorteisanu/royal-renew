@@ -1,37 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sales',
   templateUrl: './sales.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class SalesComponent implements OnInit {
+export class SalesComponent {
   items = [
     {
       title: 'Карнмзы CP3',
       price: 99,
-      sale: 25
+      sale: 25,
     },
     {
       title: '3Д Панэли',
       price: 129,
-      sale: 25
+      sale: 25,
     },
     {
       title: 'Карнмзы CP6',
       price: 129,
-      sale: 10
+      sale: 10,
     },
     {
       title: 'Карнмзы CP8',
       price: 129,
-      sale: 30
+      sale: 30,
     },
-  ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ];
 }

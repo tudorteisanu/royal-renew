@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthLayoutComponent } from '@App/layouts/auth/auth-layout/auth-layout.component';
+import { AuthLayoutComponent } from 'src/app/layouts/auth/auth-layout/auth-layout.component';
 
 const routes: Routes = [
   {

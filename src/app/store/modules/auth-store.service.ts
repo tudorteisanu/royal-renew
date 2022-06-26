@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { CredentialsInterface } from '@App/interfaces/credentials';
+import { CredentialsInterface } from 'src/app/interfaces/credentials';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthStoreService {
   key: string = 'credentials';
-  credentials: Partial<CredentialsInterface> =
-    JSON.parse(localStorage.getItem(this.key)!) || {};
+
+  credentials: Partial<CredentialsInterface> = JSON.parse(localStorage.getItem(this.key)!) || {};
+
   credentialsEvent = new BehaviorSubject(this.credentials);
 
   login(credentials: any): void {

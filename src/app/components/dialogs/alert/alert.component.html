@@ -1,10 +1,5 @@
 <div class="alert-wrapper" @alertAnimation>
-  <div
-    @alertAnimation
-    class="alert"
-    *ngFor="let alert of items"
-    [ngClass]="alert.type"
-  >
+  <div @alertAnimation class="alert" *ngFor="let alert of items" [ngClass]="alert.type">
     <div class="alert--title">
       {{ alert.title }}
     </div>

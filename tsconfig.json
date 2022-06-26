@@ -23,16 +23,13 @@
     "lib": [
       "es2020",
       "dom"
-    ],
-    "paths": {
-      "@App/*": ["src/app/*"],
-      "@Assets/*": ["src/assets/*"]
-    },
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "exclude": ["src/test.ts"]
 }

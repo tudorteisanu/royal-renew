@@ -11,15 +11,9 @@
         {{ item.text }}
       </span>
     </div>
-    <div
-      (click)="showConfirm()"
-      class="sidebar--item"
-      routerLinkActive="active"
-    >
+    <div (click)="showConfirm()" class="sidebar--item" routerLinkActive="active">
       <span class="sidebar--icon" [ngClass]="iconClass('mdi-logout')"></span>
-      <span *ngIf="show">
-        Logout
-      </span>
+      <span *ngIf="show"> Logout </span>
     </div>
   </div>
   <div class="app-version" *ngIf="show">version: {{ this.version }}</div>

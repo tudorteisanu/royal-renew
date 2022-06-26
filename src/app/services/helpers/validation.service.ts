@@ -24,16 +24,12 @@ export class ValidationService {
 
     if (control.hasError('minlength')) {
       const error = control.getError('minlength');
-      messages.push(
-        localizedErrors.minLength.replace('MIN_LENGTH', error.requiredLength)
-      );
+      messages.push(localizedErrors.minLength.replace('MIN_LENGTH', error.requiredLength));
     }
 
     if (control.hasError('maxlength')) {
       const error = control.getError('maxlength');
-      messages.push(
-        localizedErrors.maxLength.replace('MAX_LENGTH', error.requiredLength)
-      );
+      messages.push(localizedErrors.maxLength.replace('MAX_LENGTH', error.requiredLength));
     }
 
     if (control.hasError('email')) {

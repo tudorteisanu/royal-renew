@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListItemContentComponent } from './partials/list-item-content/list-item-content.component';
 import { ListItemTitleComponent } from './partials/list-item-title/list-item-title.component';
-import { ListItemComponent } from '@App/components/components/list/partials/list-item/list-item.component';
-import { ListComponent } from '@App/components/components/list/list.component';
+import { ListItemComponent } from 'src/app/components/components/list/partials/list-item/list-item.component';
+import { ListComponent } from 'src/app/components/components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +13,6 @@ import { ListComponent } from '@App/components/components/list/list.component';
     ListItemTitleComponent,
   ],
   imports: [CommonModule],
-  exports: [
-    ListComponent,
-    ListItemComponent,
-    ListItemContentComponent,
-    ListItemTitleComponent,
-  ],
+  exports: [ListComponent, ListItemComponent, ListItemContentComponent, ListItemTitleComponent],
 })
 export class ListModule {}

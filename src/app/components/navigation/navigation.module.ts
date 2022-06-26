@@ -8,8 +8,20 @@ import { FooterComponent } from './footer/footer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
-  declarations: [NavbarComponent, SidebarComponent, ProgressBarComponent, FooterComponent, ScheduleComponent],
-    exports: [NavbarComponent, SidebarComponent, ProgressBarComponent, FooterComponent, ScheduleComponent],
+  declarations: [
+    NavbarComponent,
+    SidebarComponent,
+    ProgressBarComponent,
+    FooterComponent,
+    ScheduleComponent,
+  ],
+  exports: [
+    NavbarComponent,
+    SidebarComponent,
+    ProgressBarComponent,
+    FooterComponent,
+    ScheduleComponent,
+  ],
   imports: [CommonModule, RouterModule],
 })
 export class NavigationModule {}

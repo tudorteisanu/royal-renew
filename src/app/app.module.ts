@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AuthInterceptor } from '@App/interceptors/auth.interceptor';
-import { LoaderInterceptor } from '@App/interceptors/loader.interceptor';
-import { LocaleInterceptor } from '@App/interceptors/locale.interceptor';
-import { DialogModule } from '@App/components/dialogs/dialog.module';
+import { AuthInterceptor } from 'src/app/interceptors/auth.interceptor';
+import { LoaderInterceptor } from 'src/app/interceptors/loader.interceptor';
+import { LocaleInterceptor } from 'src/app/interceptors/locale.interceptor';
+import { DialogModule } from 'src/app/components/dialogs/dialog.module';
 
 export let AppInjector: Injector;
 

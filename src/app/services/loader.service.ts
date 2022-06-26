@@ -5,9 +5,7 @@ import { BehaviorSubject, timer } from 'rxjs';
   providedIn: 'root',
 })
 export class LoaderService {
-  progressBarEvent: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
-    false
-  );
+  progressBarEvent: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   timeout = timer(300);
 

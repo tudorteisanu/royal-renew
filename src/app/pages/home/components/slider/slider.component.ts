@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriesMixin } from '@App/pages/home/mixins/categoriesMixin';
+import { CategoriesMixinComponent } from 'src/app/pages/home/mixins/CategoriesMixinComponent';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
 })
-export class SliderComponent extends CategoriesMixin implements OnInit {}
+export class SliderComponent extends CategoriesMixinComponent implements OnInit {}

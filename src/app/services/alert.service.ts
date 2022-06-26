@@ -1,16 +1,11 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import {
-  AlertComponentInterface,
-  AlertInterface,
-  AlertType,
-} from '@App/interfaces/alert';
+import { AlertComponentInterface, AlertInterface, AlertType } from 'src/app/interfaces/alert';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AlertService implements AlertComponentInterface {
-  public alertEvent: EventEmitter<AlertInterface> =
-    new EventEmitter<AlertInterface>();
+  public alertEvent: EventEmitter<AlertInterface> = new EventEmitter<AlertInterface>();
 
   public showError(message: string, withoutClosing = false): void {
     this.alertEvent.next({

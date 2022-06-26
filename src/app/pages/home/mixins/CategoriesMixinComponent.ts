@@ -1,11 +1,11 @@
 import { Subject, takeUntil } from 'rxjs';
-import { StoreService } from '@App/store/store.service';
-import { Component } from '@angular/core';
+import { StoreService } from 'src/app/store/store.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   template: '',
 })
-export class CategoriesMixin {
+export class CategoriesMixinComponent implements OnInit, OnDestroy {
   items: Array<any> = [];
 
   notifySubject: Subject<boolean> = new Subject<boolean>();

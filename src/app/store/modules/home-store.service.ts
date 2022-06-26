@@ -44,6 +44,4 @@ export class HomeStoreService {
   ];
 
   categoriesEvent = new BehaviorSubject(this.categories);
-
-  constructor() {}
 }

@@ -1,5 +1,4 @@
-import {UserInterface} from "@App/interfaces/user";
-
+import { UserInterface } from 'src/app/interfaces/user';
 
 export interface CredentialsInterface {
   user: Partial<UserInterface>;
