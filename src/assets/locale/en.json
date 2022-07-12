@@ -1,6 +1,9 @@
 {
-  "test": "data a as ",
-  "mega": {
-    "man": "sdsdsd {{value}}"
+  "navbar": {
+    "delivery": "Delivery",
+    "install": "Install",
+    "contacts": "Contacts",
+    "whereToBuy": "Where to buy",
+    "about": "About"
   }
 }

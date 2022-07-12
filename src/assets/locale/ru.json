@@ -1,6 +1,9 @@
 {
-  "test": "data a as ",
-  "mega": {
-    "man": "привте {{value}}"
+  "navbar": {
+    "delivery": "Доставка",
+    "install": "Установка",
+    "contacts": "Контакты",
+    "whereToBuy": "Где купить",
+    "about": "О нас"
   }
 }

@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { StoreService } from '../store/store.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class LocaleInterceptor implements HttpInterceptor {
+  constructor(private store: StoreService) {}
+
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const localization = `en`;
-    return next.handle(request.clone({ setHeaders: { 'x-localization': localization } }));
+    return next.handle(
+      request.clone({ setHeaders: { 'x-localization': this.store.localization.currentLang } }),
+    );
   }
 }

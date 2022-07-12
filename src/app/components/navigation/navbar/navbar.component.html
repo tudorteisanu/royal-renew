@@ -3,17 +3,21 @@
     <div class="flex items-center">
       <img class="w-12 h-12 cursor-pointer" routerLink="/" src="assets/images/logo.png" alt="" />
       <ul class="flex">
-        <li class="m-2 p-3 text-secondary font-bold">Доставка</li>
-        <li class="m-2 p-3 text-secondary font-bold">Установка</li>
-        <li class="m-2 p-3 text-secondary font-bold">Контакты</li>
-        <li class="m-2 p-3 text-secondary font-bold">Где купить</li>
-        <li class="m-2 p-3 text-secondary font-bold">О нас</li>
+        <li class="m-2 p-3 text-secondary font-bold" *ngFor="let item of contacts">
+          {{ item | translate }}
+        </li>
       </ul>
     </div>
     <div class="cursor-pointer text-white flex items-center">
-      <span class="text-sm">RO</span>
-      <span class="text-sm m-3">RU</span>
-      <span class="mdi mdi-facebook text-2xl"></span>
+      <span
+        class="text-sm p-2 rounded-full"
+        (click)="switchLanguage(language)"
+        *ngFor="let language of languages"
+        [ngClass]="languageClass(language)"
+      >
+        {{ language.toUpperCase() }}
+      </span>
+      <span class="mdi mdi-facebook text-2xl ml-2"></span>
       <span class="ml-2 mdi mdi-instagram text-2xl"></span>
     </div>
   </div>
