@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocalizationService {
-  currentLang: string = 'en'
+  currentLang: string = 'en';
 
-  constructor() {  }
+  constructor() {}
 }
