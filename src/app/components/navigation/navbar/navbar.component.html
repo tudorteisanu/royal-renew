@@ -1,14 +1,17 @@
-<nav class="w-full bg-primary p-4 h-[5rem] flex justify-center items-center">
-  <div class="max-w-7xl w-full flex items-center justify-between">
+<nav class="w-full bg-primary fixed z-20 p-4 h-[5rem] flex justify-center items-center">
+  <div class="max-w-7xl w-full flex items-center justify-center md:justify-between">
     <div class="flex items-center">
       <img class="w-12 h-12 cursor-pointer" routerLink="/" src="assets/images/logo.png" alt="" />
-      <ul class="flex">
-        <li class="m-2 p-3 text-secondary font-bold" *ngFor="let item of contacts">
-          {{ item | translate }}
+      <ul class="flex hidden md:flex" >
+        <li class="m-2 p-3 text-secondary font-bold cursor-pointer hover:text-gray-200"
+            *ngFor="let item of links"
+            [routerLink]="[item.path]"
+        >
+          {{ item.translateKey | translate }}
         </li>
       </ul>
     </div>
-    <div class="cursor-pointer text-white flex items-center">
+    <div class="cursor-pointer text-white flex items-center hidden md:flex">
       <span
         class="text-sm p-2 rounded-full"
         (click)="switchLanguage(language)"

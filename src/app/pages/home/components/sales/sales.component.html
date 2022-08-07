@@ -1,12 +1,12 @@
-<section class="w-full py-10">
+<section class="w-full p-y md:py-10">
   <div class="max-w-7xl mx-auto">
     <div class="text-3xl font-bold">Товары со скидкой</div>
     <div class="flex items-center justify-between mt-6">
-      <div>
+      <div class="hidden">
         <span class="mdi mdi-chevron-left text-5xl text-gray-500 leading-6"></span>
       </div>
-      <div class="grid grid-cols-4 gap-4">
-        <div *ngFor="let item of items">
+      <div class="flex overflow-x-auto pb-2 gap-4">
+        <div *ngFor="let item of items" class="min-w-[10rem]">
           <div class="relative">
             <div
               class="rounded-full absolute w-14 h-14 top-4 font-bold left-4 bg-secondary text-gray-900 flex items-center justify-center"
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="hidden">
         <span class="mdi mdi-chevron-right text-5xl text-gray-500 leading-6"></span>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ConfirmService } from 'src/app/services/confirm.service';
-import { ConfirmDialogOptions } from 'src/app/interfaces/confirm';
+import { ConfirmDialogOptions } from 'src/app/ts/interfaces/confirm';
 import { confirmAnimation } from 'src/app/components/dialogs/confirm/animations';
 
 @Component({

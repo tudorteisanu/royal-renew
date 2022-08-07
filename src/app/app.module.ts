@@ -12,6 +12,7 @@ import { DialogModule } from 'src/app/components/dialogs/dialog.module';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LayoutModule } from './components/layout/layout.module';
 
 export let AppInjector: Injector;
 
@@ -32,8 +33,9 @@ export function createTranslateLoader(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
         deps: [HttpClient],
-      }
+      },
     }),
+    LayoutModule,
   ],
   providers: [
     {

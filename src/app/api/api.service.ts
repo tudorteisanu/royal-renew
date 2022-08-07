@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ApiInterface } from 'src/app/interfaces/api';
+import { ApiInterface } from 'src/app/ts/interfaces/api';
 import { AuthApiService } from 'src/app/api/modules/auth-api.service';
 
 @Injectable({

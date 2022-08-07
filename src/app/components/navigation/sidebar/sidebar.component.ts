@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import menu from 'src/app/static/data/menu';
-import { MenuListInterface } from 'src/app/interfaces/menu';
+import { MenuListInterface } from 'src/app/ts/interfaces/menu';
 import packageJson from 'package.json';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { sidebarAnimation } from 'src/app/components/navigation/sidebar/animations';

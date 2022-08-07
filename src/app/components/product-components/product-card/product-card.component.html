@@ -1,0 +1,16 @@
+<div
+  class="hover:shadow-md hover:scale-105 hover:shadow-primary/40 cursor-pointer flex items-center flex-col"
+  *ngIf="product"
+>
+  <div class="w-full h-[13rem] bg-gray-600 relative">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <img [src]="getImageUrl(product)" alt="" />
+    </div>
+  </div>
+  <div class="font-bold mt-4 text-center" *ngIf="product.title">{{ product.title }}</div>
+    <div class="text-sm leading-6 text-gray-500" *ngIf="showSubtitle">
+      <span>д 200</span>
+      <span class="ml-1">в 14</span>
+      <span class="ml-1">ш 19</span>
+    </div>
+</div>

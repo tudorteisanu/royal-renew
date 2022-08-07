@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { ConfirmDialogOptions } from 'src/app/interfaces/confirm';
+import { ConfirmDialogOptions } from 'src/app/ts/interfaces/confirm';
 
 @Injectable({
   providedIn: 'root',

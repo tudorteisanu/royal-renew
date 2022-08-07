@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from 'src/app/services/http/http.service';
-import { LoginInterface, RegisterInterface } from 'src/app/interfaces/auth';
+import { LoginInterface, RegisterInterface } from 'src/app/ts/interfaces/auth';
 import { Observable, of } from 'rxjs';
 import { SiteSettings } from 'src/app/settings/siteSettings';
-import { EndpointsInterface } from 'src/app/interfaces/siteSettings';
+import { EndpointsInterface } from 'src/app/ts/interfaces/siteSettings';
 
 @Injectable({
   providedIn: 'root',

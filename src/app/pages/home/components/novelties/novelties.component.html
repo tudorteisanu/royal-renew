@@ -1,6 +1,6 @@
-<section id="novelties" class="my-20">
-  <div class="max-w-7xl mx-auto pa-10 flex">
-    <div class="flex max-w-xs w-full flex-col justify-between">
+<section id="novelties" class="my-5 md:my-20">
+  <div class="flex flex-col md:flex-row">
+    <div class="flex md:max-w-xs w-full flex-col justify-between">
       <div class="text-3xl font-bold">Новинки</div>
       <div class="text-sm text-gray-500">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -8,16 +8,16 @@
         galley of type and scrambled it to make a type specimen book. It has survived not only five
         centuries, but also the leap into electronic typesetting.
       </div>
-      <div>
+      <div class="mt-5 lg:mt-0">
         <button
           class="bg-primary text-white hover:opacity-80 font-bold px-10 py-4 rounded-full"
-          routerLink="/product-list"
+          routerLink="/novelties"
         >
           Все новинки
         </button>
       </div>
     </div>
-    <div class="flex">
+    <div class="flex mt-5 md:mt-0">
       <div *ngFor="let item of [1, 2, 3]" class="mx-2">
         <img src="assets/images/new-items.png" alt="" />
       </div>

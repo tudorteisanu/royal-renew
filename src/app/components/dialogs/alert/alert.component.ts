@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { AlertService } from 'src/app/services/alert.service';
-import { AlertInterface } from 'src/app/interfaces/alert';
+import { AlertInterface } from 'src/app/ts/interfaces/alert';
 import { Observable, Subject, takeUntil, timer } from 'rxjs';
 import { alertAnimation } from 'src/app/components/dialogs/alert/animations';
 import { ANIMATION_DELAY } from 'src/app/components/dialogs/alert/consts';

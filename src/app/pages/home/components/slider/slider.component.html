@@ -1,14 +1,14 @@
-<section class="relative w-100 min-h-[20rem] w-full h-100 max-h-[92vh] overflow-hidden">
+<section class="relative w-100 h-[100vh] w-full h-100 overflow-hidden">
   <img
-    class="max-w-full h-100 max-h-full object-cover"
+    class="max-w-full h-100 max-h-full h-full w-full object-cover"
     src="assets/images/03154400_1568022295.png"
     alt=""
   />
   <div
-    class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-between flex-col py-10"
+    class="absolute top-0 left-0 w-full p-5 pt-28 h-full bg-black bg-opacity-70 flex justify-between flex-col py-10"
   >
     <div class="flex items-center justify-between max-w-7xl mx-auto w-full">
-      <ul class="flex">
+      <ul class="hidden lg:flex">
         <li
           class="text-white font-bold ml-3 cursor-pointer hover:text-secondary"
           *ngFor="let item of items"
@@ -16,14 +16,14 @@
           {{ item.title }}
         </li>
       </ul>
-      <div class="text-white text-2xl font-bold">+373 XX XX XX</div>
+      <div class="text-white text-2xl font-bold hidden lg:flex">+373 XX XX XX</div>
     </div>
     <div class="mx-auto w-full max-w-7xl flex items-center justify-between">
       <div>
         <div>
-          <div class="text-white font-bold text-7xl">Производство</div>
-          <div class="text-white text-5xl font-bold">Продажа и монтаж</div>
-          <div class="text-secondary text-5xl font-bold">Гипсовой лепнины</div>
+          <div class="text-white font-bold text-5xl md:text-7xl">Производство</div>
+          <div class="text-white text-3xl md:text-5xl font-bold">Продажа и монтаж</div>
+          <div class="text-secondary text-3xl md:text-5xl font-bold">Гипсовой лепнины</div>
         </div>
         <button
           class="bg-secondary rounded-full p-5 font-bold w-[20rem] mt-10 text-lg cursor-pointer"
@@ -32,7 +32,7 @@
           Каталог продукции
         </button>
       </div>
-      <div>
+      <div class="hidden sm:block">
         <div class="mdi mdi-chevron-right text-6xl py-10 text-gray-500 bg-gray-300"></div>
       </div>
     </div>

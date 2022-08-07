@@ -5,7 +5,6 @@ import { SliderComponent } from 'src/app/pages/home/components/slider/slider.com
 import { NoveltiesComponent } from 'src/app/pages/home/components/novelties/novelties.component';
 import { SalesComponent } from 'src/app/pages/home/components/sales/sales.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductListComponent } from 'src/app/pages/home/components/product-list/product-list.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -13,13 +12,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        HomeComponent,
-        SliderComponent,
-        NoveltiesComponent,
-        SalesComponent,
-        ProductListComponent,
-      ],
+      declarations: [HomeComponent, SliderComponent, NoveltiesComponent, SalesComponent],
       imports: [FormsModule, ReactiveFormsModule],
     }).compileComponents();
   });

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StoreService } from 'src/app/store/store.service';
-import { CredentialsInterface } from 'src/app/interfaces/credentials';
+import { CredentialsInterface } from 'src/app/ts/interfaces/credentials';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {

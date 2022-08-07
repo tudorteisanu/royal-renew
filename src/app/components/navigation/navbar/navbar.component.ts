@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { TranslateService } from '@ngx-translate/core';
+import { PageRoutes } from '../../../ts/enum';
+
+interface LinkInterface {
+  translateKey: string;
+  path: PageRoutes;
+}
 
 @Component({
   selector: 'app-navbar',
@@ -8,12 +14,27 @@ import { TranslateService } from '@ngx-translate/core';
   styles: [],
 })
 export class NavbarComponent {
-  readonly contacts: Array<string> = [
-    'navbar.delivery',
-    'navbar.install',
-    'navbar.contacts',
-    'navbar.whereToBuy',
-    'navbar.about',
+  readonly links: Array<LinkInterface> = [
+    {
+      translateKey: 'navbar.delivery',
+      path: PageRoutes.Delivery,
+    },
+    {
+      translateKey: 'navbar.install',
+      path: PageRoutes.Install,
+    },
+    {
+      translateKey: 'navbar.contacts',
+      path: PageRoutes.Contacts,
+    },
+    {
+      translateKey: 'navbar.whereToBuy',
+      path: PageRoutes.WhereToBuy,
+    },
+    {
+      translateKey: 'navbar.about',
+      path: PageRoutes.About,
+    },
   ];
   constructor(private navigationService: NavigationService, private translate: TranslateService) {}
 
