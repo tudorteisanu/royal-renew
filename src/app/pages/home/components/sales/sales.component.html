@@ -19,14 +19,14 @@
             </div>
             <img src="assets/images/new-items.png" alt="" />
           </div>
-          <div class="mt-4 font-bold">
+          <div class="mt-4 font-bold text-center">
             {{ item.title }}
           </div>
-          <div class="font-bold">
-            <span class="text-red-500">
+          <div class="font-bold items-center justify-centern flex flex-col-reverse md:flex-row">
+            <div class="text-red-500">
               <span>{{ item.price }}</span>
-              <span>Lei</span>
-            </span>
+              <span>MDL</span>
+            </div>
             <span class="text-gray-500 ml-1 line-through">
               <span>
                 {{ item.price + (item.price * item.sale) / 100 }}

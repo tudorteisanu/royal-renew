@@ -1,7 +1,10 @@
 <app-slider></app-slider>
 <app-content>
   <app-details></app-details>
-  <app-product-list [items]="items"></app-product-list>
+  <div>
+    <div class="text-3xl font-bold">Каталог продукции</div>
+    <app-product-list [items]="items"></app-product-list>
+  </div>
   <app-novelties></app-novelties>
   <app-sales></app-sales>
 </app-content>
